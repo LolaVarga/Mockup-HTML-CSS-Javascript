@@ -1,0 +1,251 @@
+@import "constants.scss";
+@import "mixins.scss";
+
+.details {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond(tablet) {
+        display: block;
+
+    }
+
+    @include respond(desktop) {
+        display: block;
+    }
+
+
+    &__pic {
+        padding-left: 2.5rem;
+        padding-right: 2.8rem;
+        height: auto;
+
+
+        &-laptop {
+            margin-bottom: 8.5rem;
+            width: 90%;
+            box-shadow: 0;
+
+            @include respond(tablet) {
+                width: 31rem;
+                margin-bottom: 0;
+                padding-left: 0;
+                padding-right: 0;
+                margin-left: 8rem;
+                box-shadow: 2rem 2.5rem 2.5rem rgba($color-black, 0.3);
+            }
+
+            @include respond(desktop) {
+                width: 41rem;
+                margin-left: 36rem;
+                margin-bottom: 0;
+                padding-left: 0;
+                padding-right: 0;
+                box-shadow: 2rem 2.5rem 2.5rem rgba($color-black, 0.3);
+            }
+
+        }
+
+        &-girl {
+            width: 90%;
+
+            @include respond(tablet) {
+                padding-left: 5.3rem;
+                width: 25.7rem;
+
+            }
+
+            @include respond(desktop) {
+                width: 32.4rem;
+            }
+        }
+
+        &-face {
+            width: 90%;
+
+            @include respond(tablet) {
+                padding-left: 2.3rem;
+                width: 26rem;
+            }
+
+            @include respond(desktop) {
+                width: 32.8rem;
+            }
+        }
+    }
+
+    &__shape {
+        position: absolute;
+        z-index: -1;
+
+        &-dots-girl {
+            top: -0.72%;
+            left: -18.07%;
+            position: absolute;
+            z-index: -1;
+
+            @include respond(tablet) {
+                top: -1rem;
+                left: 0rem;
+
+            }
+
+        }
+
+        &-dots-laptop {
+            left: -4rem;
+            bottom: 4.5rem;
+
+            @include respond(tablet) {
+                bottom: 3rem;
+                left: 3rem;
+                width: 13.4rem;
+            }
+
+            @include respond(desktop) {
+                bottom: 4.5rem;
+                left: 31rem;
+                width: 13.4rem;
+
+            }
+
+        }
+
+        &-dots-face {
+            left: 25.5rem;
+            bottom: 1.87%;
+
+            @include respond(tablet) {
+                left: 19rem;
+                bottom: 1.87%;
+
+
+            }
+
+            @include respond(desktop) {
+                left: 62%;
+                bottom: 1.87%;
+
+
+            }
+        }
+    }
+
+    &__number {
+        position: absolute;
+        color: $color-button;
+        margin: 0px;
+        z-index: 1;
+        font-family: 'DM Serif Text', serif;
+
+        &-1 {
+            top: 21.81%;
+            left: 3%;
+            font-weight: 400;
+            font-size: 22rem;
+            font-family: 'DM Serif Text', serif;
+            line-height: 5.6rem;
+            position: absolute;
+            z-index: 1;
+
+            @include respond(tablet) {
+                font-size: 22rem;
+                font-weight: 400;
+                font-family: 'DM Serif Text', serif;
+                z-index: 1;
+                line-height: 5.6rem;
+                top: 8rem;
+                left: 7rem;
+                width: 7.7rem;
+
+            }
+
+            @include respond(desktop) {
+                font-size: 22rem;
+                font-weight: 400;
+                font-family: 'DM Serif Text', serif;
+                z-index: 1;
+                line-height: 5.6rem;
+                top: 9rem;
+                left: 1rem;
+                width: 9.7rem;
+            }
+        }
+
+        &-2 {
+            font-size: 22rem;
+            margin: 0;
+            top: -12rem;
+            left: 0rem;
+            font-weight: 400;
+            font-family: 'DM Serif Text', serif;
+            line-height: 5.6rem;
+
+            @include respond(tablet) {
+                font-size: 18rem;
+                font-family: 'DM Serif Text', serif;
+                line-height: 5.6rem;
+                font-weight: 400;
+                top: 19rem;
+                left: 2rem;
+
+
+            }
+
+            @include respond(desktop) {
+                font-size: 22rem;
+                margin: 0;
+                top: 25rem;
+                left: 29rem;
+                font-weight: 400;
+                font-family: 'DM Serif Text', serif;
+                line-height: 5.6rem;
+
+            }
+        }
+
+        &-3 {
+            font-size: 22rem;
+            left: 2rem;
+            top: 8rem;
+            font-family: 'DM Serif Text', serif;
+            font-weight: 400;
+            line-height: 5.6rem;
+            font-size: 22rem;
+
+            @include respond(tablet) {
+                font-size: 18rem;
+                font-weight: 400;
+            }
+
+            @include respond(desktop) {
+                left: 0rem;
+            }
+        }
+    }
+
+    &__tablet {
+        display: none;
+
+        @include respond(tablet) {
+            display: inline;
+            position: absolute;
+            z-index: -1;
+            top: -5rem;
+            right: 0rem;
+            width: 20rem;
+
+        }
+
+        @include respond(desktop) {
+            display: inline;
+            position: absolute;
+            z-index: -1;
+            top: -6rem;
+            right: 24rem;
+            width: 29rem;
+        }
+    }
+}
